@@ -1,0 +1,23 @@
+{
+  "name": "basic-info-site",
+  "version": "1.0.0",
+  "description": "\"this is a simple site to showcase use of express\"",
+  "homepage": "https://github.com/Petergrac/Basic-NodeJS-Routing#readme",
+  "bugs": {
+    "url": "https://github.com/Petergrac/Basic-NodeJS-Routing/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Petergrac/Basic-NodeJS-Routing.git"
+  },
+  "license": "ISC",
+  "author": "\"Peter Wanjiru\"",
+  "type": "commonjs",
+  "main": "index.cjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
