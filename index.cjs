@@ -1,14 +1,13 @@
-// index.cjs
+
 const express = require('express');
+require('dotenv').config();
 const path = require('path'); // Required for handling file paths
-
+const port = process.env.PORT;
+console.log(port);
 const app = express();
-const port = 3000; // You can choose any available port
 
-// Serve static files from the current directory (where your HTML files are)
-// This is crucial for serving your HTML files as well as any CSS/JS/images
-// that might be linked in your HTML.
 app.use(express.static(path.join(__dirname)));
+
 
 // Route for the home page
 app.get('/', (req, res) => {
@@ -25,11 +24,10 @@ app.get('/about', (req, res) => {
 app.get('/contacts', (req, res) => {
     res.sendFile(path.join(__dirname, 'contact-me.html'));
 });
-// 404 handler (should always be placed after all specific routes)
-app.all('*', (req, res) => {
-  // Set the status to 404
-  res.status(404).sendFile(path.join(__dirname, '404.html'));
-});
+// 404 handler (should always be placed after all specific routes) 
+app.get('*spat',(req,res)=>{
+    res.sendFile(path.join(__dirname,'404.html'))
+})
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
